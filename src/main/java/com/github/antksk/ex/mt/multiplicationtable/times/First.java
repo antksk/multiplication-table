@@ -26,6 +26,10 @@ public enum First implements Timeable {
         this.time = time;
     }
 
+    /**
+     * 아이템 42. 익명 클래스 보다는 람다를 사용하라.
+     * 아이템 44. 표준 함수형 인터페이스를 사용하라.
+     */
     private static final SecondTimesCreaterFunction secondTimesCreater = Second::of;
     private static final SecondTimesCreatersSupplier secondTimesCreaters = Second::all;
 
@@ -45,6 +49,9 @@ public enum First implements Timeable {
               .collect(toSet());
     }
 
+    /**
+     * 아이템 36. 비트 필드 대신 EnumSet을 사용하라.
+     */
     private static Set<First> firsts = EnumSet.of(
         two, three, four, five, six, seven, eight, nine
     );

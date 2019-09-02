@@ -19,6 +19,12 @@ import static java.util.Collections.unmodifiableSet;
 import static java.util.stream.Collectors.*;
 import static java.util.stream.Collectors.toList;
 
+/**
+ * 아이템 10. equals는 일반 규약을 지켜 재정의하라.
+ * 아이템 11. equals를 재정의하려거든 hashCode도 재정의하라.
+ * 아이템 12. toString을 항상 재정의하라.
+ * 아이템 14. Comparable을 구현할지 고려하라.
+ */
 @ToString
 @EqualsAndHashCode
 final class Second implements Comparable<Second>, Timeable {
@@ -40,6 +46,11 @@ final class Second implements Comparable<Second>, Timeable {
         return false == isEmpty();
     }
 
+    /**
+     * 아이템 1. 생성자 대신 정적 팩터리 메서드를 고려하라.
+     * @param time
+     * @return
+     */
     public static Second of(int time){
         return beOutOfTimes(time) ? empty()
             : getCacheSecond(time);
@@ -54,6 +65,11 @@ final class Second implements Comparable<Second>, Timeable {
         return time - o.time;
     }
 
+    /**
+     *
+     * 아이템 24. 맴버 클래스는 되도록 static으로 만들어라.
+     * 아이템 28. 배열보다는 리스트를 사용하라.
+     */
     static class SecondCache{
         private static final Second empty;
 
