@@ -8,14 +8,14 @@ import org.junit.jupiter.api.Test;
 
 import lombok.extern.slf4j.Slf4j;
 
-import static com.github.antksk.ex.mt.multiplicationtable.times.First.eight;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First.five;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First.four;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First.nine;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First.seven;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First.six;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First.three;
 import static com.github.antksk.ex.mt.multiplicationtable.times.First.two;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First.three;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First.four;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First.five;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First.six;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First.seven;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First.eight;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First.nine;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("구구단 테스트")
