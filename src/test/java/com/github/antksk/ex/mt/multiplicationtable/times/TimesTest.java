@@ -8,26 +8,27 @@ import org.junit.jupiter.api.Test;
 
 import lombok.extern.slf4j.Slf4j;
 
-import static com.github.antksk.ex.mt.multiplicationtable.times.First.two;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First.three;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First.four;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First.five;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First.six;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First.seven;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First.eight;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First.nine;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To16.sixteen;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.two;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.three;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.four;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.five;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.six;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.seven;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.eight;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.nine;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("구구단 테스트")
 @Slf4j
 public class TimesTest {
 
-    public void multiplicationTimesAssert(First first, Integer ... args){
+    public void multiplicationTimesAssert(FirstTimeable firstTimeable, Integer ... args){
         ListIterator<? extends Number> listIterator = Arrays.asList(args).listIterator();
         while(listIterator.hasNext()){
             final int second = listIterator.nextIndex() + 1;
             Number expected = listIterator.next();
-            assertThat(first.times(second).toResult()).isEqualTo(expected);
+            assertThat(firstTimeable.times(second).toResult()).isEqualTo(expected);
         }
     }
 
@@ -77,5 +78,11 @@ public class TimesTest {
     @Test
     public void test_9(){
         multiplicationTimesAssert( nine,9, 18, 27, 36, 45, 54, 63, 72, 81);
+    }
+
+    @Test
+    public void test_aaa(){
+        log.debug("9 x 2 = {}", nine.times(2).toResult());
+        log.debug("16 x 2 = {}", sixteen.times(2).toResult());
     }
 }

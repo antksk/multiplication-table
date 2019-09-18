@@ -44,6 +44,16 @@ dependencies {
     testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
 }
 
+// 소스 인코딩 지정방법 1
+[compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+// 소스 인코딩 지정밥법 2
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+javadoc {
+    options.encoding = 'UTF-8'
+}
+
 test {
     outputs.dir snippetsDir
 }

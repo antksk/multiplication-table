@@ -27,7 +27,7 @@ import static java.util.stream.Collectors.toList;
  */
 @ToString
 @EqualsAndHashCode
-final class Second implements Comparable<Second>, Timeable {
+final class Second implements Comparable<Timeable>, Timeable {
     public static final int LOWER_TIMES = 0;
     public static final int HIGHER_TIMES = 9;
 
@@ -61,8 +61,8 @@ final class Second implements Comparable<Second>, Timeable {
     }
 
     @Override
-    public int compareTo(Second o) {
-        return time - o.time;
+    public int compareTo(Timeable o) {
+        return time - o.getTime();
     }
 
     /**
