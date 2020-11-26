@@ -6,7 +6,6 @@ import java.util.Comparator;
 import java.util.EnumSet;
 import java.util.Set;
 import java.util.TreeSet;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import lombok.Getter;
@@ -15,7 +14,6 @@ import static com.github.antksk.ex.mt.multiplicationtable.times.FirstTimes.secon
 import static com.github.antksk.ex.mt.multiplicationtable.times.FirstTimes.timesCollect;
 import static com.github.antksk.ex.mt.multiplicationtable.times.FirstTimes.timesResultable;
 import static java.util.stream.Collectors.toCollection;
-import static java.util.stream.Collectors.toSet;
 
 enum First2To16 implements Timeable, FirstTimeable{
     ten(10),
