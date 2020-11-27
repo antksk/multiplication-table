@@ -6,21 +6,24 @@ import java.util.ListIterator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import lombok.extern.slf4j.Slf4j;
-
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To16.eleven;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To16.fifteen;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To16.fourteen;
 import static com.github.antksk.ex.mt.multiplicationtable.times.First2To16.sixteen;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.two;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.three;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.four;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.five;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.six;
-import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.seven;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To16.ten;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To16.thirteen;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To16.twelve;
 import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.eight;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.five;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.four;
 import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.nine;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.seven;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.six;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.three;
+import static com.github.antksk.ex.mt.multiplicationtable.times.First2To9.two;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("구구단 테스트")
-@Slf4j
 public class TimesTest {
 
     public void multiplicationTimesAssert(FirstTimeable firstTimeable, Integer ... args){
@@ -80,9 +83,46 @@ public class TimesTest {
         multiplicationTimesAssert( nine,9, 18, 27, 36, 45, 54, 63, 72, 81);
     }
 
+    @DisplayName("10단 테스트")
     @Test
-    public void test_aaa(){
-        log.debug("9 x 2 = {}", nine.times(2).toResult());
-        log.debug("16 x 2 = {}", sixteen.times(2).toResult());
+    public void test_10() {
+        multiplicationTimesAssert(ten, 10, 20, 30, 40, 50, 60, 70, 80, 90);
     }
+
+    @DisplayName("11단 테스트")
+    @Test
+    public void test_11() {
+        multiplicationTimesAssert(eleven, 11, 22, 33, 44, 55, 66, 77, 88, 99);
+    }
+
+    @DisplayName("12단 테스트")
+    @Test
+    public void test_12() {
+        multiplicationTimesAssert(twelve, 12, 24, 36, 48, 60, 72, 84, 96, 108);
+    }
+
+    @DisplayName("13단 테스트")
+    @Test
+    public void test_13() {
+        multiplicationTimesAssert(thirteen, 13, 26, 39, 52, 65, 78, 91, 104, 117);
+    }
+
+    @DisplayName("14단 테스트")
+    @Test
+    public void test_14() {
+        multiplicationTimesAssert(fourteen, 14, 28, 42, 56, 70, 84, 98, 112, 126);
+    }
+
+    @DisplayName("15단 테스트")
+    @Test
+    public void test_15() {
+        multiplicationTimesAssert(fifteen, 15, 30, 45, 60, 75, 90, 105, 120, 135);
+    }
+
+    @DisplayName("16단 테스트")
+    @Test
+    public void test_16() {
+        multiplicationTimesAssert(sixteen, 16, 32, 48, 64, 80, 96, 112, 128, 144);
+    }
+
 }

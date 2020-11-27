@@ -33,3 +33,8 @@
 - (7) 실제 구현 클래스보다 인터페이스를 많이 생성하기 위해서 FP 사용(SecondTimesCreaterFunction, SecondTimesCreatersSupplier, etc)
 - (8) ```default``` 메소드를 제외하고, 인터페이스 안의 메소드는 3개 내외로 구성함
 - (9) ```class```, ```inner class```, ```enum```,  ```interface```,  ```EnumSet```등 사용함
+
+### __[주의사항]__
+최신 IntelliJ인 경우, 아래의 설정을 해야 정상적으로 테스트 가능함
+1. Perferences > Build, Execution, Deployment > Build Tools > Gradle
+2. Build And run using, Run test useing 설정 값을 모두 IntelliJ IDEA로 변경 필요
